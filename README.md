@@ -85,7 +85,7 @@ This sample has no application API route, database, accounts, or multi-user coll
 
 ## Contributing
 
-For bugs, open an issue with reproduction steps and the relevant diagram format. For changes, include a focused pull request and run `npm run quality` where practical. Never include API keys, private prompts, or sensitive diagrams in an issue or test fixture.
+For bugs, open an issue with reproduction steps and the relevant diagram format. For changes, open a focused pull request. Before merging, the maintainer reviews the diff and confirms the required `quality` check passes. Never include API keys, private prompts, or sensitive diagrams in an issue or test fixture.
 
 ## License
 
