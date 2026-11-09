@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Check, GitBranch, Layers3, MessageSquareText } from "lucide-react";
+import { ArrowRight, Check, GitBranch, Github, Layers3, MessageSquareText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeProvider";
 
@@ -18,6 +18,6 @@ export function LandingPage({ onStart, hasKey }: { onStart: () => void; hasKey: 
       <section className="landing-process" id="how-it-works" aria-labelledby="process-title"><div className="process-heading"><span className="eyebrow">THE WORKFLOW</span><h2 id="process-title">From rough idea to useful artifact.</h2><p>A focused workspace keeps the conversation beside the diagram while you iterate.</p></div><div className="process-steps"><article><span className="process-number">01</span><MessageSquareText aria-hidden="true" /><h3>Describe it</h3><p>Explain a process, system, or interaction. The assistant can ask a clarifying question before drawing.</p></article><article><span className="process-number">02</span><GitBranch aria-hidden="true" /><h3>Review it</h3><p>See a proposed diagram on the canvas. Compare it with the approved version and inspect its source.</p></article><article><span className="process-number">03</span><Layers3 aria-hidden="true" /><h3>Keep refining</h3><p>Approve, reject, revise, restore earlier versions, and download an editable file.</p></article></div></section>
       <section className="landing-close"><div><span className="eyebrow">READY TO MAP IT OUT?</span><h2>Start with the idea you have.</h2><p>Flowcharts, sequence diagrams, and architecture diagrams all begin with a conversation.</p></div><Button onClick={onStart} size="lg">{hasKey ? "Resume workspace" : "Get started"} <ArrowRight aria-hidden="true" /></Button></section>
     </main>
-    <footer className="landing-footer"><strong>LLM Diagram</strong><span>Your key stays in this tab. Diagrams, conversations, and pending proposals persist in this browser. Requests go directly to OpenAI.</span></footer>
+    <footer className="landing-footer"><strong>LLM Diagram</strong><span>Your key stays in this tab. Diagrams, conversations, and pending proposals persist in this browser. Requests go directly to OpenAI.</span><a className="repo-link" href="https://github.com/weber-stephen/LLM-Diagram-App" target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" />View on GitHub</a></footer>
   </div>;
 }
