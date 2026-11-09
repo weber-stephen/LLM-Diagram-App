@@ -1,0 +1,6 @@
+%% Flowchart - Event-Driven Architecture
+flowchart TD
+  A[S3 Bucket] -->|Triggers| B[Lambda Function]
+  B -->|Publishes Event| C[SNS Topic]
+  C -->|Sends Message| D[SQS Queue]
+  D -->|Processes Message| E[Processing Service]`
