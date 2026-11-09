@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Github } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { readSessionKey } from "@/lib/session-key";
 import { AgentWorkspace, type Proposal } from "@/components/AgentWorkspace";
@@ -102,6 +102,6 @@ export default function WorkspacePage() {
     </main>
     {deleteId && <ConfirmDialog title="Delete this diagram?" description="The diagram, conversation, and all its versions will be removed from this browser." confirmLabel="Delete diagram" onCancel={() => setDeleteId(null)} onConfirm={() => { deleteDiagram(deleteId); setDeleteId(null); }} />}
     {confirmClearAll && <ConfirmDialog title="Clear all local data?" description="This removes this app's diagrams, conversations, pending proposals, versions, and settings from this browser, plus the key and telemetry choice in this tab. This cannot be undone." confirmLabel="Clear all local data" onCancel={() => setConfirmClearAll(false)} onConfirm={() => { clearLocalData(); setApiKey(null); router.replace("/"); }} />}
-    <footer className="app-footer">Diagrams, conversations, and pending proposals persist in this browser. Your key and telemetry choice last for this tab. Requests go directly to OpenAI.</footer>
+    <footer className="app-footer">Diagrams, conversations, and pending proposals persist in this browser. Your key and telemetry choice last for this tab. Requests go directly to OpenAI. <a className="repo-link" href="https://github.com/weber-stephen/LLM-Diagram-App" target="_blank" rel="noopener noreferrer"><Github aria-hidden="true" />View on GitHub</a></footer>
   </div>;
 }
